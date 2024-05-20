@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:provider_recall/pages/cart_page.dart';
+import 'package:provider_recall/pages/products_page.dart';
 import 'package:provider_recall/providers/cart_provider.dart';
 
 void main() {
@@ -23,6 +25,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: "/products",
+      routes: {
+        "/cart": (context) => const CartPage(),
+        "/products": (context) => const ProductsPage(),
+      },
     );
   }
 }
